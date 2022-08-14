@@ -1,9 +1,9 @@
 import { Router } from "express";
-import prot from "../controllers/prot.controller";
+import { prot, authenticate } from "../controllers/prot.controller";
 
 const protRouter: Router = Router();
 
 // Connect controller
-protRouter.get("/", prot);
+protRouter.get("/", authenticate ,prot);
 
 export default protRouter;
