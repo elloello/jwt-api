@@ -17,7 +17,7 @@ export default async function jwtSign(req: Request, res: Response) {
 
   // Generate the token           
   sign({username}, String(process.env.SECRET), (error: Error | null , token?: string) => {
-    if (error) res.status(400).send("Bad request");
+    if (error) res.status(400).send("Something went wrong.");
     res.json({
       token
     });

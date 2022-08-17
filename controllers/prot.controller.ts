@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { JwtPayload, verify } from "jsonwebtoken";
+import { verify } from "jsonwebtoken";
 
 // Verifying middleware to check the jwt token
 
@@ -8,6 +8,8 @@ export function authenticate(req: Request, res: Response, next: NextFunction) {
 
   if (token === '') return res.status(401).send("Unauthorized");
   verify(token, String(process.env.SECRET), (err: Error | null, user) => {
+		if(err) res.status(400).send("Something went wrong.");
+
     (<any>req).user = user; // it works, don't touch it
     next();
   });
@@ -16,7 +18,7 @@ export function authenticate(req: Request, res: Response, next: NextFunction) {
 // GET /
 // access: private
 
-export async function prot(req: Request, res: Response) {
+export async function prot(_req: Request, res: Response) {
   res.json({
     protected: true,
   });
