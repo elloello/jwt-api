@@ -8,7 +8,7 @@ export function authenticate(req: Request, res: Response, next: NextFunction) {
 
   if (token === '') return res.status(401).send("Unauthorized");
   verify(token, String(process.env.SECRET), (err: Error | null, user) => {
-		if(err) res.status(400).send("Something went wrong.");
+    if(err) res.status(400).send("Something went wrong.");
 
     (<any>req).user = user; // it works, don't touch it
     next();
