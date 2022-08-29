@@ -6,4 +6,8 @@
    - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
    - [Typescript](https://github.com/microsoft/TypeScript)
 
-### I'll add database support when I'm bored
+### Run the app -
+   - Clone the repo
+   - Run `npm i`
+   - Make config/.env with the necessary varaiables [PORT, SECRET]
+   - Then, run `npm run dev`
