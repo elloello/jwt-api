@@ -13,5 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(signRouter);
 app.use(protRouter);
 
+app.get("*", async (_req, res) => {
+  res.status(404).send("go to something which exists 💀")
+});
+
 // Start the server
 app.listen(process.env.PORT, () => console.log(`p: ${process.env.PORT}`));
