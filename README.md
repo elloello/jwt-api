@@ -7,7 +7,7 @@
    - [Typescript](https://github.com/microsoft/TypeScript)
 
 ### Run the app -
-   - Clone the repo
+   - Clone the repo and `cd` into it
    - Run `npm i`
-   - Make config/.env with the necessary varaiables [PORT, SECRET]
+   - Make `config/.env` with the necessary varaiables [`PORT`, `SECRET`]
    - Then, run `npm run dev`
