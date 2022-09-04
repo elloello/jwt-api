@@ -1,5 +1,7 @@
 import express, { Express, json } from "express";
-import { config } from "dotenv"; config({path: './config/.env'})
+import { config } from "dotenv"; config({path: './config/.env'});
+import { Redis } from "@upstash/redis";
+
 import signRouter from "./routes/sign.route";
 import protRouter from "./routes/prot.route";
 
