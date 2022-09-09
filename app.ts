@@ -5,7 +5,7 @@ import { Redis } from "@upstash/redis";
 import signRouter from "./routes/sign.route";
 import protRouter from "./routes/prot.route";
 
-const app: Express = express();
+export const app: Express = express();
 
 // Middlware
 app.use(json());

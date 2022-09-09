@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
-import { z } from "zod";
-
 // Verifying middleware to check the jwt token
 
 export function authenticate(req: Request, res: Response, next: NextFunction) {
@@ -21,7 +19,7 @@ export function authenticate(req: Request, res: Response, next: NextFunction) {
 // access: private
 
 export async function prot(_req: Request, res: Response) {
-  res.json({
+  res.status(200).json({
     protected: true,
   });
 };
