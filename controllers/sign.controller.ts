@@ -2,19 +2,9 @@ import { Request, Response } from "express";
 import { sign } from "jsonwebtoken";
 import { config } from "dotenv"; config({path: '../config/.env'});
 
-import { z, AnyZodObject } from "zod";
-
 interface User {
   username: string,
 };
-
-export const schema = z.object({
-  body: z.object({
-    username: z.string({
-      required_error: "provide the shit blin",
-    }),
-  })
-});
 
 // POST /jwt
 // access: public
