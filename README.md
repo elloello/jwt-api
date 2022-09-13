@@ -6,6 +6,10 @@
    - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
    - [Typescript](https://github.com/microsoft/TypeScript)
 
+### API routes
+   - GET /
+   - POST /jwt
+
 ### Run the app -
    - Clone the repo and `cd` into it
    - Run `npm i`
